@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=shift_jis" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<link href="monkey.css" rel="stylesheet" type="text/css" />
+<title>!cgi_title!</title>
+</head>
+<body onload="document.monkey.word.focus()">
+
+!counter!
+
+<div class="ta-c">
+<h1>!cgi_title!</h1>
+
+<div class="menu-btn">
+	<a class="button" href="!homepage!">トップに戻る</a>
+	<a class="button" href="!monkey_cgi!?mode=note" onclick="window.open(this.href,'note','width=550,height=350,scrollbars=1');return false;">遊び方</a>
+	<a class="button" href="!monkey_cgi!?mode=kuji" onclick="window.open(this.href,'note','width=550,height=350,scrollbars=1');return false;">本日の運勢</a>
+	<a class="button" href="!admin_cgi!">管理用</a>
+</div>
+
+<p>!icon:osaru.gif!</p>
+
+<div id="main-box">
+	<ul class="form-msg">
+	<li>前の方が残した下の言葉から、あなたが連想した言葉を登録して下さい。</li>
+	<li>登録すると今までの連想された言葉を全て見ることができます。</li>
+	<li>全角2～25文字以内の文字で投稿してください。</li>
+	</ul>
+	
+	<div class="main-form">
+	<p><strong>!word!</strong> といったら・・</p>
+	<form action="!monkey_cgi!" method="post" name="monkey">
+	<input type="hidden" name="mode" value="bana" />
+	<input type="hidden" name="no" value="!num!" />
+	<input type="text" name="word" size="55" maxlength="50" id="word" /><br /><br />
+	<div id="submit">
+		<button type="submit" class="color red button">Submit</button>
+	</div>
+	</form>
+	</div>
+</div>
+
+</div>
+</body>
+</html>
